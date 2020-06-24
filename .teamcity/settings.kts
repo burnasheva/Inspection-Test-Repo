@@ -1,4 +1,6 @@
 import jetbrains.buildServer.configs.kotlin.v2019_2.*
+import jetbrains.buildServer.configs.kotlin.v2019_2.failureConditions.BuildFailureOnText
+import jetbrains.buildServer.configs.kotlin.v2019_2.failureConditions.failOnText
 import jetbrains.buildServer.configs.kotlin.v2019_2.ideaInspections
 
 /*
@@ -48,6 +50,15 @@ object Inspections : BuildType({
             jvmArgs = "-Xmx6G -XX:ReservedCodeCacheSize=1G"
             targetJdkHome = "%env.JDK_18%"
             profileName = "Project Default"
+        }
+    }
+
+    failureConditions {
+        failOnText {
+            conditionType = BuildFailureOnText.ConditionType.CONTAINS
+            pattern = "Total: 1"
+            failureMessage = "OK"
+            reverse = false
         }
     }
 })
