@@ -54,6 +54,7 @@ object Inspections : BuildType({
 
     triggers {
         retryBuild {
+            enabled = false
             attempts = 1000
             moveToTheQueueTop = true
         }
