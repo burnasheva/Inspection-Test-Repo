@@ -64,12 +64,6 @@ object Inspections : BuildType({
     failureConditions {
         failOnText {
             conditionType = BuildFailureOnText.ConditionType.CONTAINS
-            pattern = "Total: 1"
-            failureMessage = "OK"
-            reverse = false
-        }
-        failOnText {
-            conditionType = BuildFailureOnText.ConditionType.CONTAINS
             pattern = "Total: 0"
             failureMessage = "Fail"
             reverse = false
