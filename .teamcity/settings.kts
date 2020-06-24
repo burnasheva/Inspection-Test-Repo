@@ -1,6 +1,4 @@
 import jetbrains.buildServer.configs.kotlin.v2019_2.*
-import jetbrains.buildServer.configs.kotlin.v2019_2.failureConditions.BuildFailureOnText
-import jetbrains.buildServer.configs.kotlin.v2019_2.failureConditions.failOnText
 import jetbrains.buildServer.configs.kotlin.v2019_2.ideaInspections
 import jetbrains.buildServer.configs.kotlin.v2019_2.triggers.retryBuild
 
@@ -58,15 +56,6 @@ object Inspections : BuildType({
         retryBuild {
             attempts = 1000
             moveToTheQueueTop = true
-        }
-    }
-
-    failureConditions {
-        failOnText {
-            conditionType = BuildFailureOnText.ConditionType.CONTAINS
-            pattern = "Total: 0"
-            failureMessage = "Fail"
-            reverse = false
         }
     }
 })
