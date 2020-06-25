@@ -31,7 +31,7 @@ project {
     buildType(Inspections)
 
     params {
-        param("teamcity.dont.delete.temp.result.dir", "true")
+        param("system.teamcity.dont.delete.temp.result.dir=true", "true")
     }
 }
 
