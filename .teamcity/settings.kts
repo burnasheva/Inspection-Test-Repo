@@ -39,7 +39,7 @@ project {
 object Inspections : BuildType({
     name = "Inspections"
 
-    artifactRules = "+:**"
+    artifactRules = "+:results-*.zip"
 
     vcs {
         root(DslContext.settingsRoot)
