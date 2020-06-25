@@ -56,7 +56,6 @@ object Inspections : BuildType({
             profileName = "Project Default"
         }
         script {
-            enabled = false
             scriptContent = """
                 if compgen -G "%system.teamcity.build.tempDir%/inspection*result/UseExpressionBody.xml" > /dev/null; then
                     echo "Some inspections fail"
