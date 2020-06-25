@@ -57,7 +57,12 @@ object Inspections : BuildType({
         }
         script {
             enabled = false
-            scriptContent = "tar cfvz results-%build.number%.tar.gz %system.teamcity.build.tempDir%/inspection*result"
+            scriptContent = """
+                if compgen -G "%system.teamcity.build.tempDir%/inspection*result/" > /dev/null; then
+                    echo "Some inspections fail"
+                    exit 1
+                fi
+            """.trimIndent()
         }
     }
 
