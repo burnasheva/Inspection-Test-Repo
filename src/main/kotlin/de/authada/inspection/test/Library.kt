@@ -4,5 +4,7 @@
 package de.authada.inspection.test
 
 class Library {
-    fun someLibraryMethod(): Boolean = true
+    fun someLibraryMethod(): Boolean {
+        return true
+    }
 }
