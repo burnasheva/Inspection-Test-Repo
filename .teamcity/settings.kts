@@ -85,5 +85,12 @@ object Inspections : BuildType({
             compareTo = value()
             stopBuildOnFailure = true
         }
+        failOnMetricChange {
+            metric = BuildFailureOnMetric.MetricType.INSPECTION_WARN_COUNT
+            threshold = 0
+            units = BuildFailureOnMetric.MetricUnit.DEFAULT_UNIT
+            comparison = BuildFailureOnMetric.MetricComparison.MORE
+            compareTo = value()
+        }
     }
 })
