@@ -1,4 +1,5 @@
 import jetbrains.buildServer.configs.kotlin.v2019_2.*
+import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.v2019_2.ideaInspections
 import jetbrains.buildServer.configs.kotlin.v2019_2.triggers.retryBuild
 
@@ -53,6 +54,9 @@ object Inspections : BuildType({
             jvmArgs = "-Xmx6G -XX:ReservedCodeCacheSize=1G"
             targetJdkHome = "%env.JDK_18%"
             profileName = "Project Default"
+        }
+        script {
+            scriptContent = "zip results-%env.BUILD_VCS_NUMBER%.zip %system.teamcity.build.tempDir%/inspection*result/*"
         }
     }
 
