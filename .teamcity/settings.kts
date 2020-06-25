@@ -56,7 +56,7 @@ object Inspections : BuildType({
             profileName = "Project Default"
         }
         script {
-            scriptContent = "zip results-%env.BUILD_VCS_NUMBER%.zip %system.teamcity.build.tempDir%/inspection*result/*"
+            scriptContent = "tar cfvz results-%env.BUILD_VCS_NUMBER%.tar.gz %system.teamcity.build.tempDir%/inspection*result"
         }
     }
 
