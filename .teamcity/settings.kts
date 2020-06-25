@@ -35,7 +35,7 @@ project {
 object Inspections : BuildType({
     name = "Inspections"
 
-    artifactRules = "+:%system.teamcity.build.tempDir%/inspection*result/"
+    artifactRules = "+:%system.teamcity.build.tempDir%/inspection*result/UseExpressionBody.xml"
 
     params {
         param("system.teamcity.dont.delete.temp.result.dir", "true")
