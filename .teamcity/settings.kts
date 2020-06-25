@@ -58,7 +58,7 @@ object Inspections : BuildType({
         }
         script {
             scriptContent = """
-                ls -lah /var/lib/teamcity/teamcity-agent1/temp/buildTmp
+                ls -lah %system.teamcity.build.tempDir%
                 tar cfvz results-%env.BUILD_VCS_NUMBER%.tar.gz %system.teamcity.build.tempDir%/inspection*result
             """.trimIndent()
         }
