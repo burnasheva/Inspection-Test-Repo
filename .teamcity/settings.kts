@@ -57,7 +57,7 @@ object Inspections : BuildType({
         }
         script {
             scriptContent = """
-                if test -n "${'$'}(find . -maxdepth 1 -name '%system.teamcity.build.tempDir%/inspection*result/UseExpressionBody.xml' -print -quit)"
+                if test -n "${'$'}(find %system.teamcity.build.tempDir% -maxdepth 2 -name 'UseExpressionBody.xml' -print -quit)"
                 then
                     echo "Some inspections fail"
                     exit 1
