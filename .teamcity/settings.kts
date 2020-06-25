@@ -39,6 +39,7 @@ object Inspections : BuildType({
 
     params {
         param("teamcity.dont.delete.temp.result.dir", "true")
+        param("system.teamcity.dont.delete.temp.result.dir", "true")
     }
 
     vcs {
