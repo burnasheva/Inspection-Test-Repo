@@ -38,7 +38,7 @@ object Inspections : BuildType({
     artifactRules = "+:results-*.tar.gz"
 
     params {
-        param("teamcity.dont.delete.temp.result.dir", "true")
+        param("system.teamcity.dont.delete.temp.result.dir", "true")
     }
 
     vcs {
