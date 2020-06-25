@@ -35,7 +35,7 @@ project {
 object Inspections : BuildType({
     name = "Inspections"
 
-    artifactRules = "+:results-*.zip"
+    artifactRules = "+:results*.tar.gz"
 
     params {
         param("teamcity.dont.delete.temp.result.dir", "true")
