@@ -37,6 +37,10 @@ object Inspections : BuildType({
 
     artifactRules = "+:results-*.zip"
 
+    params {
+        param("teamcity.dont.delete.temp.result.dir", "true")
+    }
+
     vcs {
         root(DslContext.settingsRoot)
 
