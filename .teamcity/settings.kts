@@ -30,10 +30,6 @@ version = "2019.2"
 project {
 
     buildType(Inspections)
-
-    params {
-        param("system.teamcity.dont.delete.temp.result.dir=true", "true")
-    }
 }
 
 object Inspections : BuildType({
