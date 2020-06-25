@@ -1,3 +1,0 @@
-<component name="DependencyValidationManager">
-  <scope name="Inspectable Authada Files" pattern="!file[inspection-test-repo.test]:kotlin//*" />
-</component>

@@ -8,3 +8,5 @@
  */
 
 rootProject.name = "inspection-test-repo"
+
+include(":submodule")

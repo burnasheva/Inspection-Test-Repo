@@ -4,6 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/inspection-test-repo.iml" filepath="$PROJECT_DIR$/.idea/modules/inspection-test-repo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/inspection-test-repo.main.iml" filepath="$PROJECT_DIR$/.idea/modules/inspection-test-repo.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/submodule/inspection-test-repo.submodule.iml" filepath="$PROJECT_DIR$/.idea/modules/submodule/inspection-test-repo.submodule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/submodule/inspection-test-repo.submodule.main.iml" filepath="$PROJECT_DIR$/.idea/modules/submodule/inspection-test-repo.submodule.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/submodule/inspection-test-repo.submodule.test.iml" filepath="$PROJECT_DIR$/.idea/modules/submodule/inspection-test-repo.submodule.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/inspection-test-repo.test.iml" filepath="$PROJECT_DIR$/.idea/modules/inspection-test-repo.test.iml" />
     </modules>
   </component>
