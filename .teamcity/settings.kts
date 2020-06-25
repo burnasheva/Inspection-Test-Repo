@@ -58,7 +58,7 @@ object Inspections : BuildType({
         script {
             enabled = false
             scriptContent = """
-                if compgen -G "%system.teamcity.build.tempDir%/inspection*result/" > /dev/null; then
+                if compgen -G "%system.teamcity.build.tempDir%/inspection*result/UseExpressionBody.xml" > /dev/null; then
                     echo "Some inspections fail"
                     exit 1
                 fi
